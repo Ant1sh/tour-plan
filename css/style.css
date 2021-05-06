@@ -356,11 +356,11 @@ body {
   margin: auto;
 }
 
-.header {
+.navbar {
   background-color: #fff;
 }
 
-.header-top {
+.navbar-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,7 +374,7 @@ body {
   padding-bottom: 40px;
 }
 
-.header-top__search {
+.navbar-top__search {
   margin-right: auto;
   margin-left: 108px;
 }
@@ -426,7 +426,7 @@ body {
   height: 40px;
   border-radius: 50%;
   -o-object-fit: cover;
-    object-fit: cover;
+     object-fit: cover;
 }
 
 .user__name {
