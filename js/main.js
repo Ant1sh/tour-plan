@@ -4,7 +4,7 @@ const hotelSwiper = new Swiper(".hotel-slider", {
   // Navigation arrows
   navigation: {
     nextEl: ".hotel-slider__button--next",
-    prevEl: ".hotel-slider-button--prev",
+    prevEl: ".hotel-slider__button--prev",
   },
   keyboard: {
     enabled: true,
