@@ -1,6 +1,14 @@
 .hotel
   padding-top: 15px 
   padding-bottom: 70px
+  &-grid 
+    display: flex
+    justify-content: space-between
+    // align-items: flex-start
+  &-right 
+    display: flex
+    flex-direction: column
+    justify-content: space-between
   &-info
     display: flex
     align-items: center
@@ -69,6 +77,7 @@
         background-position: center
         background-size: 10px
         bacground-color: transparent
+
 .stars
   flex-basis: 100%
   
@@ -106,3 +115,83 @@
 .number
   font-size: 10px
   line-height: 13px
+
+.booking 
+  border-radius: 8px 
+  width: 350px 
+  min-height: 210px 
+  padding: 28px
+  background-color: $dark
+  color: $light
+  &__info
+    display: flex
+    justify-content: space-between
+    margin-bottom: 9px
+  &__price 
+    display: flex 
+    flex-direction: column
+  &__start 
+    font-weight: normal 
+    font-size: 10px 
+    line-height: 14px
+  &__pricetag 
+    font-size: normal 
+    font-weight: 800 
+    font-size: 24px 
+    line-height: 33px
+  &__per-room 
+    font-style: normal 
+    font-weight: normal 
+    font-size: 12px 
+    line-height: 16px
+  &__room 
+    margin-top: 4px
+  &__text 
+    font-style: normal 
+    font-weight: normal
+    font-size: 12px 
+    line-height: 16px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 8px
+  &__descriprtion
+    margin-left: 9px
+  &__call-center 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 17px
+  &__heading 
+    font-size: normal 
+    font-weight: 600 
+    font-size: 18px 
+    line-height: 25px
+  &__number 
+    display: flex
+    align-items: center 
+    justify-content: space-between
+    color: inherit
+    text-decoration: none
+    font-weight: 600 
+    font-size: 18px
+    line-height: 25px
+  &__num 
+    margin-left: 8px
+  &__button 
+    width: 100%
+    min-height: 45px
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    border-radius: 4px
+    background-color: $primary
+    border: none 
+    color: $light
+    cursor: pointer
+.map 
+  width: 347px
+  height: 213px   
+  border-radius: 8px 
+
+
