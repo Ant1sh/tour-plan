@@ -357,10 +357,6 @@ body {
   margin: auto;
 }
 
-/* img {
-  max-width: 100%;
-} */
-
 .navbar {
   background-color: #fff;
 }
@@ -627,7 +623,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10px;
-  bacground-color: transparent;
+  background-color: transparent;
 }
 
 .hotel-slider__button--prev {
@@ -636,7 +632,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10px;
-  bacground-color: transparent;
+  background-color: transparent;
 }
 
 .stars {
@@ -687,7 +683,7 @@ body {
   font-family: 'Nunito', sans-serif;
   border-radius: 8px;
   width: 350px;
-  min-height: 210px;
+  height: 210px;
   padding: 28px;
   background-color: #0A223D;
   color: #ffffff;
@@ -720,7 +716,6 @@ body {
 }
 
 .booking__pricetag {
-  font-size: normal;
   font-weight: 800;
   font-size: 24px;
   line-height: 33px;
@@ -819,6 +814,14 @@ body {
   overflow: hidden;
 }
 
+.maps {
+  width: 100%;
+  height: 213px;
+  border: 0;
+  loading: lazy;
+  allowfullscreen: true;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -856,9 +859,11 @@ body {
     font-size: 12px;
     line-height: 15px;
   }
+  .search {
+    margin-left: 45px;
+  }
   .search__input {
     width: 340px;
-    margin-left: -25px;
   }
   .hotel-grid {
     -webkit-box-orient: vertical;
@@ -877,12 +882,20 @@ body {
   }
   .booking {
     width: 340px;
+    height: 210px;
+    padding-top: 25px;
+    padding-left: 23px;
+    padding-right: 22px;
   }
   .map {
     width: 340px;
+    height: 213px;
   }
   .slider {
     width: 100%;
+  }
+  .logo__image {
+    width: 133px;
   }
 }
 
@@ -959,7 +972,6 @@ body {
     height: 305px;
   }
   .hotel-right {
-    min-height: 450px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -967,9 +979,12 @@ body {
   }
   .booking {
     width: 100%;
+    height: 216px;
   }
   .map {
     width: 100%;
+    height: 213px;
+    margin-top: 30px;
   }
 }
 
@@ -984,6 +999,9 @@ body {
   .logo {
     width: 99px;
   }
+  .logo__image {
+    width: 99px;
+  }
   .stars {
     margin-right: 16px;
   }
@@ -993,11 +1011,26 @@ body {
   .hotel {
     padding-top: 5px;
   }
-  .slider {
-    height: 250px;
-  }
   .hotel {
     margin-bottom: 20px;
+  }
+  .hotel__slider {
+    height: 179px;
+  }
+  .hotel-grid {
+    padding-top: 16px;
+  }
+  .swiper-slider__image {
+    width: 100%;
+    height: 100%;
+  }
+  .booking {
+    margin-top: -10px;
+    height: 210px;
+  }
+  .map {
+    min-height: 173px;
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
