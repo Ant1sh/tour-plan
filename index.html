@@ -9,15 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
-  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=82d625a0-59bd-4c73-8089-8fd59b9ecd32&lang=ru_RU" type="text/javascript"></script>
-  <script type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=82d625a0-59bd-4c73-8089-8fd59b9ecd32&lang=ru_RU"></script>
+  <script>
         ymaps.ready(init);
         function init(){
             var myMap = new ymaps.Map("map", {
                 center: [7.83846682, 98.29807086],
                 zoom: 17
             });
-        } -->
+        } 
   </script>
   <title>Best Tour Plan - Hotel Booking</title>
 </head>
@@ -151,16 +151,16 @@
           <button class="button booking__button">View Other Options</button>
         </div>
         <div class="map">
-          <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1117.1818250928911!2d98.29877649296365!3d7.
+          <!-- <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1117.1818250928911!2d98.29877649296365!3d7.
           838253268512231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025650c33dbab%3A0xa67a542329d011e1!2z0J_
-          RhdGD0LrQtdGCLCDQmtCw0YDQvtC9LCDQntGC0LXQu9GMINCl0LjQu9GC0L7QvQ!5e0!3m2!1sru!2sca!4v1620791119580!5m2!1sru!2sca"></iframe>
+          RhdGD0LrQtdGCLCDQmtCw0YDQvtC9LCDQntGC0LXQu9GMINCl0LjQu9GC0L7QvQ!5e0!3m2!1sru!2sca!4v1620791119580!5m2!1sru!2sca"></iframe> -->
           <div id="map" class="maps"></div>
         </div>
         </div>
       </div>
       </div>
   </section>
-  <section class="newsletter">
+  <section class="newsletter" data-parallax="scroll" data-image-src="img/newsletter-bg.jpg">
     <div class="newsletter-wrapper">
       <h2 class="newsletter-title newsletter__title">subscribe to our
       <span class="newsletter-title__strong">Newsletter</span>  
@@ -199,7 +199,7 @@
             it is very nearby most of the popular places but self location in a narrow street is not good. 
             Overall it was a good experience and could recommend.</p>
           </div> 
-                  <button class="reviews-slider__button reviews-slider__button--prev"></button>
+        <button class="reviews-slider__button reviews-slider__button--prev"></button>
         <button class="reviews-slider__button reviews-slider__button--next"></button>
           </div>
           <div class="swiper-slide">
@@ -254,6 +254,8 @@
       </div>
     </div>
   </section>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/parallax.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
