@@ -9,7 +9,9 @@
         width: 100%
         height: 100%
         object-fit: cover
-
+  .card 
+    width: 230px
+    height: 230px
 @media(max-width: 992px)
   .container, 
   .newsletter-wrapper
@@ -70,8 +72,12 @@
         transform: translateY(-50%)
         &--prev
           left: 0
+          margin-left: 0
+          margin-top: 14px
         &--next
           right: 0
+          margin-right: 0
+          margin-top: 14px
     &__title
       font-size: 30px
       line-height: 38px
@@ -81,6 +87,18 @@
       margin-top: 21px
     &__subscribe 
       margin-top: 1px
+  .activities
+    padding-top: 30px
+    padding-bottom: 70px
+    &-wrapper
+      flex-wrap: wrap
+      row-gap: 20px
+    .card
+      width: 340px
+      height: 255px
+      &__title
+        &--last
+          width: 200px
 
 @media(max-width: 767px)
   .body 
@@ -143,10 +161,11 @@
   .newsletter
     &-wrapper
       flex-direction: column
-      max-width: 576px
       width: 92%
       align-items: flex-start
-
+      flex-direction: row  
+    &__subscribe 
+      margin-top: 30px  
   .reviews
     &-slider
       &__item
@@ -163,6 +182,9 @@
           right: 50%
           margin-right: -90px
           transform: translate(50%, 0)
+  .card
+    width: 48%
+    height: 255px
 
 @media( max-width: 480px )
   .body 
@@ -182,13 +204,13 @@
     padding-top: 5px
     &__slider
       height: 179px
+      object-fit: cover
   .hotel-grid 
     padding-top: 16px
   .swiper-slider
     &__image 
       width: 100%
-      height: 100%
-      // object-fit: cover
+      border-radius: 8px
   .booking 
     margin-top: -10px
     height: 210px
@@ -199,6 +221,10 @@
     margin-top: -23px
     padding: 52px 0 71px 0
     height: 320px
+    &-wrapper 
+      flex-wrap: wrap
+    &__subscribe
+      margin-top: 0px
     &-title
       width: 250px
       font-style: light
@@ -216,16 +242,14 @@
   .subscribe
     width: 100%
     margin-left: 7px
-
     &__button
-      margin-right: 15px
+      margin-right: 8px
       border-bottom-right-radius: 5px
       border-top-right-radius: 5px
     &__input
       padding-left: 20px
       width: 276px
       height: 55px
-
   .reviews
     padding-top: 33px
     &__title
@@ -252,5 +276,19 @@
         padding-left: 0
       &__date 
         padding-left: 0
+      &__button 
+        &--prev
+          margin-top: 0px
+        &--next
+          margin-top: 0px
   .swiper-slide
     height: 483px
+  .card 
+    width: 49%
+    height: 255px
+  .activities
+    padding-top: 11px
+    &__title 
+      font-size: 18px
+      line-height: 23px
+      margin-bottom: 36px

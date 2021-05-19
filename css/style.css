@@ -903,6 +903,30 @@ body {
   line-height: 18px;
 }
 
+.subscribe__input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 18px;
+  color: #BDBDBD;
+}
+
+.subscribe__input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 18px;
+  color: #BDBDBD;
+}
+
+.subscribe__input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 18px;
+  color: #BDBDBD;
+}
+
+.subscribe__input::placeholder {
+  font-size: 14px;
+  line-height: 18px;
+  color: #BDBDBD;
+}
+
 .subscribe__button {
   position: absolute;
   min-width: 65px;
@@ -972,6 +996,7 @@ body {
   height: 47px;
   background-image: url(../img/quote-right.svg);
   background-repeat: no-repeat;
+  z-index: 10;
 }
 
 .reviews-slider__button {
@@ -1063,10 +1088,103 @@ body {
   text-align: justify;
   margin: auto;
   overflow: auto;
+  margin-top: 2px;
+  z-index: 99;
 }
 
 .rev-star {
   margin-left: 2px;
+}
+
+.activities {
+  padding: 41px 0 98px 0;
+}
+
+.activities__title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 57px;
+}
+
+.activities-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 24px 26px;
+  width: 255px;
+  height: 255px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%);
+  z-index: -1;
+}
+
+.card__image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+}
+
+.card__title {
+  margin-top: auto;
+  margin-bottom: 18px;
+  width: 160px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.card__title--last {
+  width: 200px;
+}
+
+.card__button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  padding: 7px 22px;
+  border: none;
+  background-color: #EC1f46;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
@@ -1081,6 +1199,10 @@ body {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .card {
+    width: 230px;
+    height: 230px;
   }
 }
 
@@ -1159,9 +1281,13 @@ body {
   }
   .reviews-slider__button--prev {
     left: 0;
+    margin-left: 0;
+    margin-top: 14px;
   }
   .reviews-slider__button--next {
     right: 0;
+    margin-right: 0;
+    margin-top: 14px;
   }
   .reviews__title {
     font-size: 30px;
@@ -1173,6 +1299,22 @@ body {
   }
   .newsletter__subscribe {
     margin-top: 1px;
+  }
+  .activities {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+  .activities-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .activities .card {
+    width: 340px;
+    height: 255px;
+  }
+  .activities .card__title--last {
+    width: 200px;
   }
 }
 
@@ -1268,11 +1410,15 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-width: 576px;
     width: 92%;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+  .newsletter__subscribe {
+    margin-top: 30px;
   }
   .reviews-slider__item {
     padding: 0 30px 30px;
@@ -1294,6 +1440,10 @@ body {
     margin-right: -90px;
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
+  }
+  .card {
+    width: 48%;
+    height: 255px;
   }
 }
 
@@ -1322,13 +1472,15 @@ body {
   }
   .hotel__slider {
     height: 179px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .hotel-grid {
     padding-top: 16px;
   }
   .swiper-slider__image {
     width: 100%;
-    height: 100%;
+    border-radius: 8px;
   }
   .booking {
     margin-top: -10px;
@@ -1342,6 +1494,13 @@ body {
     margin-top: -23px;
     padding: 52px 0 71px 0;
     height: 320px;
+  }
+  .newsletter-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .newsletter__subscribe {
+    margin-top: 0px;
   }
   .newsletter-title {
     width: 250px;
@@ -1364,7 +1523,7 @@ body {
     margin-left: 7px;
   }
   .subscribe__button {
-    margin-right: 15px;
+    margin-right: 8px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
   }
@@ -1406,8 +1565,26 @@ body {
   .reviews-slider__date {
     padding-left: 0;
   }
+  .reviews-slider__button--prev {
+    margin-top: 0px;
+  }
+  .reviews-slider__button--next {
+    margin-top: 0px;
+  }
   .swiper-slide {
     height: 483px;
+  }
+  .card {
+    width: 49%;
+    height: 255px;
+  }
+  .activities {
+    padding-top: 11px;
+  }
+  .activities__title {
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 36px;
   }
 }
 /*# sourceMappingURL=style.css.map */
