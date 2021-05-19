@@ -1,9 +1,12 @@
 .newsletter
   position: relative
-  padding: 98px 0 87px 0
+  padding: 72px 0 87px 0
   background-repeat: no-repeat 
   background-position: center
   background-size: cover 
+  height: 260px
+  &__subscribe
+    margin-top: 6px
   &:before 
     content: ''
     position: absolute
@@ -27,6 +30,7 @@
     font-weight: 300
     font-size: 24px 
     line-height: 30px
+    margin-top: 26px
     &__strong 
       display: block
       font-style: normal
@@ -36,7 +40,7 @@
       text-transform: uppercase
 .subscribe
   position: relative
-  width: 335px
+  width: 350px
   height: 55px
   border-radius: 4px 
   overflow: hidden
@@ -59,7 +63,7 @@
     height: 100%
     border: none
     background-color: $primary
-    color: light
+    color: $light
     font-weight: bold
     font-size: 12px
     line-height: 15px
