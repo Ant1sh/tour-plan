@@ -1,6 +1,7 @@
 .packages
   padding-bottom: 70px
   &__title
+    margin-top: 41px
     padding-bottom: 35px
     font-weight: bold
     font-size: 36px
@@ -10,12 +11,13 @@
   &-grid
     display: grid
     grid-template-columns: repeat(3, 1fr)
-    grid-template-rows: 500px minmax(500px, 1fr)
+    grid-template-rows: 500px
     row-gap: 30px
     column-gap: 30px
+
 .package
-  display: flex
-  flex-direction: column
+  display: grid
+  // flex-direction: column
   position: relative
   border-radius: 8px
   background-color: $dark
@@ -25,6 +27,7 @@
     padding-left: 31px
     padding-right: 21px
     padding-bottom: 15px
+    margin-bottom: 18px
     &__title
       margin-bottom: 22px
       font-style: normal
@@ -34,11 +37,12 @@
       color: $light
   &-first
     grid-column-start: span 2
-    display: flex
+    display: grid
     flex-direction: row
     &__image
-      flex-basis: 50%
+      width: 100%
       object-fit: cover
+      height: 500px
     &__flash
       position: absolute
       top: 26px
@@ -55,10 +59,11 @@
       background-color: $primary
       color: $light
     &-info
-      display: flex
-      flex-direction: column
+      // display: flex
+      // flex-direction: column
       max-width: 364px
       padding: 47px 21px 30px 44px
+      grid-column: 2 / 3
     &-footer
       padding-top: 10px
     &__title

@@ -12,6 +12,9 @@
   .card 
     width: 230px
     height: 230px
+  .footer
+    &__form
+      width: 100%
 @media(max-width: 992px)
   .container, 
   .newsletter-wrapper
@@ -102,12 +105,63 @@
   .packages
     &-grid
       grid-template-columns: repeat(2, 1fr)
-
-@media(max-width: 767px)
+  .footer
+    padding-top: 35px
+    &-wrapper
+      grid-template-columns: repeat(6, 1fr)
+      grid-row-gap: 40px
+    &__contact-form
+      grid-column: span 4
+    &__logo
+      width: 97px
+      height: auto
+      grid-row: 1 / 2
+      grid-column: span 2
+    &__social
+      &-network
+        grid-row: 1 / 2
+        grid-column: span 4
+        align-self: center
+        margin-left: -53px
+        margin-top: 50px
+    &__categories
+      grid-row: 2 / 3
+      grid-column: span 2
+      margin-top: 13px
+    &__legal
+      grid-column: span 2
+      margin-top: 13px
+      margin-left: 20px
+    &__add
+      grid-column: span 2
+      margin-top: 13px
+      margin-left: -40px
+    &__contact
+      &-details
+        grid-column: span 5
+        grid-row: 3
+        margin-top: 10px
+    &__form
+      grid-column: span 6
+      grid-row: 4
+      width: 539px
+    &__input
+      flex-basis: 47%
+      font-size: 12px
+    &-additional
+      padding-top: 0
+      justify-content: space-between
+      &__list
+        padding-left: 0
+    &__additional
+      margin-top: 55px
+      
+@media (max-width: 767px) 
   .body 
     max-width: 100%
     overflow-x: hidden
-  .container    
+  .container  
+    max-width: 576px  
     width: 92% 
   .navbar
     &__search, &-menu, &__user
@@ -164,6 +218,7 @@
   .newsletter
     &-wrapper
       flex-direction: column
+      max-width: 576px
       width: 92%
       align-items: flex-start
       flex-direction: row  
@@ -214,6 +269,87 @@
         object-fit: cover
       &__text
         display: none
+  .footer
+    &__add
+      margin-left: 15px
+    &__contact-form
+      grid-column: span 6
+      margin-left: 0
+    &__input
+      flex-basis: 100%
+
+@media (max-width: 576px)
+  .logo
+    width: 99px
+  .newsletter
+    padding: 76px 0 83px 0
+    &__title
+      margin-bottom: 37px
+  .subscribe
+    width: 100%
+  .reviews
+    &__title
+      font-size: 18px
+      line-height: 23px
+  .card
+    width: 100%
+  .activities
+    &__title
+      font-size: 18px
+  .packages
+    &__title
+      font-size: 18px
+      padding-bottom: 20px
+  .package
+    &-first
+      &-info
+        padding-left: 15px
+    &-info
+      padding-left: 15px
+  .footer
+    &-wrapper
+      grid-template-columns: 1fr
+    &__logo
+      grid-row: 1
+      grid-column: 1
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+        margin-left: 0
+    &__add
+      grid-row: 4
+      grid-column: 1
+      margin-left: 0
+    &__categories
+      grid-row: 5
+      grid-column: 1
+    &__legal
+      grid-row: 3
+      grid-column: 1
+      margin-left: 0
+    &__additional
+      margin-top: 0
+    &__form
+      width: 100%
+    &__message
+      width: 100%
+    &__input
+      flex-basis: 100%
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-row: 7
+        grid-column: 1
+    &__button
+      margin-bottom: 15px
+    &-additional
+      display: block
+      &__item
+        margin-bottom: 10px
+
 @media( max-width: 480px )
   .body 
     max-width: 100%
@@ -231,16 +367,17 @@
   .hotel 
     padding-top: 5px
     &__slider
-      height: 179px
+      height: 180px
       object-fit: cover
   .hotel-grid 
-    padding-top: 16px
+    padding-top: 17px
   .swiper-slider
     &__image 
       width: 100%
       border-radius: 8px
   .booking 
     margin-top: -10px
+    padding-top: 29px
     height: 210px
   .map 
     height: 173px
@@ -253,6 +390,8 @@
       flex-wrap: wrap
     &__subscribe
       margin-top: 0px
+      width: 280px
+      margin-left: 5px
     &-title
       width: 250px
       font-style: light
@@ -267,17 +406,20 @@
         font-style: SemiBold
         font-size: 30px
         line-height: 38px
+  // .subscribe
+  //   width: 100%
+  //   margin-left: 7px
+  //   &__button
+  //     margin-right: 8px
+  //     border-bottom-right-radius: 5px
+  //     border-top-right-radius: 5px
+  //   &__input
+  //     padding-left: 20px
+  //     width: 276px
+  //     height: 55px
   .subscribe
-    width: 100%
-    margin-left: 7px
-    &__button
-      margin-right: 8px
-      border-bottom-right-radius: 5px
-      border-top-right-radius: 5px
     &__input
-      padding-left: 20px
-      width: 276px
-      height: 55px
+      padding-left: 22px
   .reviews
     padding-top: 33px
     &__title
@@ -316,10 +458,11 @@
     height: 255px
   .activities
     padding-top: 11px
+    padding-bottom: 65px
     &__title 
       font-size: 18px
       line-height: 23px
-      margin-bottom: 36px
+      margin-bottom: 39px
     .card
       width: 100%
       &:nth-child(2)
@@ -331,3 +474,54 @@
       font-size: 18px
       line-height: 23px
       margin-bottom: 36px
+  .footer
+    &__logo
+      width: 95px
+      margin-bottom: -15px
+    &__social
+      &-network
+        flex-direction: column
+    &__title
+      &--inline
+        padding-bottom: 22px
+        margin-top: -20px
+      &--mb-1
+        margin-bottom: 15px
+      &--mb-3
+        margin-top: 7px
+    &__text 
+      margin-bottom: 20px
+    &__legal
+      margin-top: -13px
+    &__add
+      margin-top: -10px
+    &__categories
+      margin-top: -10px
+    &__contact-details
+      margin-top: -10px
+    &__ul
+      &--ml
+        padding-top: 5px
+    &__icon
+      &-wrapper
+        min-width: 20px
+        margin-right: 5px
+    &__message
+      margin-bottom: 15px
+      font-size: 12px
+    &__info
+      margin-bottom: 15px
+    &__button
+      margin-bottom: 27px
+      &-wrapper
+        display: flex
+        flex-direction: column-reverse
+        width: auto
+        align-items: flex-start
+    &-additional
+      display: flex
+      flex-wrap: wrap
+      &__list
+        min-width: 280px
+      &__item
+        margin-right: 7px
