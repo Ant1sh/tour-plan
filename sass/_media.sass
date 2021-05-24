@@ -32,6 +32,7 @@
       margin-right: 73px //new
     &-menu
       padding: 22px 15px
+      margin-bottom: 0 //new
       &__link
         font-size: 12px
         line-height: 15px
@@ -165,7 +166,7 @@
       margin-bottom: 15px
     &__dialog
       padding: 20px 70px 33px 70px
-      text-decoration: underline
+      // text-decoration: underline
   button:hover
     box-shadow: none
   button:active
@@ -182,18 +183,17 @@
   .navbar
     &__search
       margin-right: 0
-    &--mobile
-      &_fixed
-        position: fixed
-        left: 0
-        top: 0
-        right: 0
-        z-index: 99
+    &--fixed
+      position: fixed
+      left: 0
+      top: 0
+      right: 0
+      z-index: 99
     &__user, &__search 
       &--mobile 
-        &_hidden 
+        &--hidden 
           display: none
-        &_visible 
+        &--visible 
           display: flex
     &__user 
       flex-direction: column 
@@ -209,14 +209,19 @@
       padding-top: 30px
       &--visible
         display: block
+        overflow-y: auto
     &-menu
-      padding: 22px 0
       flex-direction: column
+      padding-top: 0
+      max-height: 440px
       &__item
-        margin-bottom: 20px
+        margin-bottom: 15px
         &--mobile 
           &--visible
             display: block
+            margin-bottom: 30px
+          &--mb
+            margin-bottom: 40px
   .menu 
     &-button    
       display: flex
