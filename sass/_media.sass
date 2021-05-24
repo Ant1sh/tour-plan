@@ -155,7 +155,24 @@
         padding-left: 0
     &__additional
       margin-top: 55px
-      
+  .modal
+    &-button-wrapper
+      display: flex
+      flex-direction: column-reverse
+      width: auto
+      align-items: flex-start
+    &__info
+      margin-bottom: 15px
+    &__dialog
+      padding: 20px 70px 33px 70px
+      text-decoration: underline
+  button:hover
+    box-shadow: none
+  button:active
+    background-color: $primary
+    box-shadow: none
+  a:hover
+    text-decoration: none    
 @media (max-width: 767px) 
   .container
     max-width: 576px
@@ -316,7 +333,10 @@
       margin-left: 0
     &__input
       flex-basis: 100%
-
+  .modal
+    &__dialog
+      padding: 20px 50px 33px 50px
+      width: 85%
 @media (max-width: 576px)
   .logo
     width: 99px
@@ -388,6 +408,9 @@
       display: block
       &__item
         margin-bottom: 10px
+  .modal
+    &__dialog
+      padding: 20px 30px 33px 30px
 
 @media( max-width: 480px )
   .body 
@@ -564,3 +587,9 @@
         min-width: 280px
       &__item
         margin-right: 7px
+  .button
+    &-wrapper
+      display: flex
+      flex-direction: column-reverse
+      width: auto
+      align-items: flex-start

@@ -6,24 +6,18 @@ require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
-$email = $_POST['email'];
+$email = $_POST['phone'];
+$text = $_POST['message'];
 
 
 // Формирование самого письма
-if(isset($_POST['email'])){
-    $title = "Новая подписка Tour Plan";
-    $body = 'User mail: ' . $_POST['email'];
-} else {
-    $title = "Новое обращение Tour Plan";
-    $body = "
-    <h2>Новое письмо</h2>
-    <b>Имя:</b> $name<br>
-    <b>Телефон:</b> $phone<br><br>
-    <b>Сообщение:</b><br>$message
-"
-;}
+$title = "Новое обращение Best Tour Plan";
+$body = "
+<h2>Нoвое обращение</h2>
+<b>Имя:</b> $name<br>
+<b>Телефон:</b> $phone<br><br>
+<b>Сообщение:</b><br>$message
+";
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -74,8 +68,7 @@ else {$result = "error";}
 }
 
 // Отображение результата
-if ($email == null) {
-  header('Location: thankyou.html');
-} else {
-  header('Location: subscribe.html');
-}
+var_dump($_POST);
+echo $title;
+echo $body;
+echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
