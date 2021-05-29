@@ -472,6 +472,35 @@ a:hover {
           box-shadow: none;
 }
 
+.invalid {
+  position: relative;
+  color: #EC1f46;
+  border-bottom: 1px solid #EC1f46;
+  font-size: 11px;
+  line-height: 12px;
+}
+
+#name-error {
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  z-index: 100;
+}
+
+#phone-error {
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  z-index: 100;
+}
+
+#email-error {
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  z-index: 100;
+}
+
 .navbar {
   background-color: #fff;
 }
@@ -1695,17 +1724,7 @@ a:hover {
 }
 
 .footer__input {
-  -ms-flex-preferred-size: 48%;
-      flex-basis: 48%;
-  background-color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  padding: 0 23px;
-  margin-bottom: 15px;
-  height: 50px;
-  color: #333333;
-  font-size: 12px;
-  line-height: 15px;
+  width: 100%;
 }
 
 .footer__input::-webkit-input-placeholder {
@@ -1728,21 +1747,39 @@ a:hover {
   border: none;
 }
 
+.footer__input-group {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.footer__input-group::-webkit-input-placeholder {
+  color: #BDBDBD;
+  border: none;
+}
+
+.footer__input-group:-ms-input-placeholder {
+  color: #BDBDBD;
+  border: none;
+}
+
+.footer__input-group::-ms-input-placeholder {
+  color: #BDBDBD;
+  border: none;
+}
+
+.footer__input-group::placeholder {
+  color: #BDBDBD;
+  border: none;
+}
+
 .footer__message {
   width: 539px;
   height: 123px;
-  resize: none;
-  background-color: #ffffff;
-  border-radius: 4px;
-  padding: 18px 23px;
-  border: none;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  color: #333333;
   margin-bottom: 23px;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 15px;
 }
 
 .footer__message::-webkit-input-placeholder {
@@ -1918,6 +1955,45 @@ a:hover {
   text-align: center;
 }
 
+.modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modal__form-group {
+  position: relative;
+  width: 100%;
+  height: 65px;
+  padding: 0;
+}
+
+.modal__input {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.modal__input:first-child {
+  margin-top: 0;
+}
+
+.modal__message {
+  width: 100%;
+  min-height: 123px;
+}
+
+.modal__button {
+  margin-top: 15px;
+}
+
 .modal__input {
   width: 100%;
   margin-bottom: 15px;
@@ -1934,6 +2010,22 @@ a:hover {
   font-size: 12px;
   line-height: 15px;
   color: #E0E0E0;
+}
+
+.modal ::-webkit-input-placeholder {
+  color: #BDBDBD;
+}
+
+.modal :-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.modal ::-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.modal ::placeholder {
+  color: #BDBDBD;
 }
 
 @media (max-width: 1200px) {
@@ -1962,9 +2054,6 @@ a:hover {
   .container,
   .newsletter-wrapper {
     max-width: 700px;
-  }
-  .header {
-    margin-top: -1px;
   }
   .logo {
     width: 132px;
@@ -2076,6 +2165,9 @@ a:hover {
   .footer {
     padding-top: 35px;
   }
+  .footer__title--inline {
+    margin-left: 0;
+  }
   .footer-wrapper {
     -ms-grid-columns: (1fr)[6];
         grid-template-columns: repeat(6, 1fr);
@@ -2083,6 +2175,7 @@ a:hover {
   }
   .footer__contact-form {
     grid-column: span 4;
+    margin-left: 0;
   }
   .footer__logo {
     width: 97px;
@@ -2132,7 +2225,7 @@ a:hover {
     grid-row: 4;
     width: 539px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 47%;
         flex-basis: 47%;
     font-size: 12px;
@@ -2180,6 +2273,11 @@ a:hover {
   a:hover {
     text-decoration: none;
   }
+  .packages__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2189,6 +2287,9 @@ a:hover {
   }
   body {
     padding-top: 78px;
+  }
+  .navbar {
+    overflow: hidden;
   }
   .navbar__search {
     margin-right: 0;
@@ -2415,13 +2516,17 @@ a:hover {
     grid-column: span 6;
     margin-left: 0;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
   .modal__dialog {
     padding: 20px 50px 33px 50px;
     width: 85%;
+  }
+  .packages__title {
+    margin-top: 0;
+    margin-bottom: 0px;
   }
 }
 
@@ -2563,7 +2668,10 @@ a:hover {
        object-fit: cover;
   }
   .hotel-grid {
-    padding-top: 17px;
+    padding-top: 23px;
+  }
+  .hotel-info__offer {
+    margin-top: 0;
   }
   .swiper-slider__image {
     width: 100%;
@@ -2574,12 +2682,16 @@ a:hover {
     padding-top: 29px;
     height: 210px;
   }
+  .booking__button {
+    height: 35px;
+    padding-top: 12px;
+  }
   .map {
     height: 173px;
     margin-top: 20px;
   }
   .newsletter {
-    margin-top: -23px;
+    margin-top: -25px;
     padding: 52px 0 71px 0;
     height: 320px;
   }
@@ -2607,6 +2719,9 @@ a:hover {
     font-style: SemiBold;
     font-size: 30px;
     line-height: 38px;
+  }
+  .breadcrumb-list {
+    padding-top: 10px;
   }
   .subscribe__input {
     padding-left: 22px;
@@ -2650,6 +2765,19 @@ a:hover {
   .reviews-slider__button--next {
     margin-top: 0px;
   }
+  .hotel-slider__button--prev {
+    background-size: 8px;
+  }
+  .hotel-slider__button--next {
+    background-size: 8px;
+  }
+  .navbar__search--mobile--visible {
+    width: 250px;
+    margin-bottom: 10px;
+  }
+  .navbar-bottom {
+    margin-top: -9px;
+  }
   .swiper-slide {
     height: 483px;
   }
@@ -2657,14 +2785,23 @@ a:hover {
     width: 49%;
     height: 255px;
   }
+  .card__title_card2 {
+    margin-top: 125px;
+  }
+  .card__title_card4 {
+    margin-top: 125px;
+  }
   .activities {
-    padding-top: 11px;
+    padding-top: 7px;
     padding-bottom: 65px;
+  }
+  .activities__card {
+    padding-bottom: 29px;
   }
   .activities__title {
     font-size: 18px;
     line-height: 23px;
-    margin-bottom: 39px;
+    margin-bottom: 40px;
   }
   .activities .card {
     width: 100%;
@@ -2697,6 +2834,7 @@ a:hover {
   .footer__title--inline {
     padding-bottom: 22px;
     margin-top: -20px;
+    margin-left: 0;
   }
   .footer__title--mb-1 {
     margin-bottom: 15px;

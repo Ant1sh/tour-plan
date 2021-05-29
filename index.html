@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="world.ico" type="image/x-icon">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=82d625a0-59bd-4c73-8089-8fd59b9ecd32&lang=ru_RU"></script>
   <script>
         ymaps.ready(init);
@@ -25,11 +27,11 @@
 <header class="navbar navbar--fixed">
     <div class="container">
       <div class="navbar-top">
-        <a href="#" class="logo">
+        <a href="#" class="logo" data-aos="fade-down" >
           <img src="img/Besttourplan.svg" alt="Best Tour Plan" class="logo__image"/>
         </a>
-        <form action="#" class="search navbar__search navbar__search--mobile--hidden">
-          <input type="text" class="search__input" placeholder="Search Location">
+        <form data-aos="fade-down" data-aos-duration="800" action="#" class="search navbar__search navbar__search--mobile--hidden">
+          <input required type="text" class="search__input" placeholder="Search Location">
           <button class="search__button">
             <img src="img/search.svg" alt="Icon: search">
           </button>
@@ -62,7 +64,7 @@
             </li>
             <li class="navbar-menu__item navbar-menu__item--mobile--visible navbar-menu__item--mobile--visible--mb">
               <form action="#" class="search navbar__search navbar__search--mobile--visible">
-                <input type="text" class="search__input" placeholder="Search Location">
+                <input required type="text" class="search__input" placeholder="Search Location">
                 <button class="search__button">
                   <img src="img/search.svg" alt="Icon: search">
                 </button>
@@ -167,7 +169,7 @@
       </div>
       </div>
   </section>
-  <!-- <section class="packages">
+  <section class="packages">
     <div class="container">
       <h2 class="packages__title">Other Packages</h2>
       <div class="packages-grid">
@@ -324,15 +326,15 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section> 
   <section class="newsletter" data-parallax="scroll" data-image-src="img/newsletter-bg.jpg">
     <div class="newsletter-wrapper">
       <h2 class="newsletter-title newsletter__title">
         subscribe to our
-        <span class="newsletter-title__strong">Newsletter</span>
+        <span data-aos="zoom-in" class="newsletter-title__strong">Newsletter</span>
       </h2>
       <form class="subscribe newsletter__subscribe" action="send.php" method="POST">
-        <input type="email" class="subscribe__input" placeholder="Your email address" name="email"> 
+        <input required type="email" class="subscribe__input" placeholder="Your email address" name="email"> 
         <button class="subscribe__button">Send</button>
       </form>
     </div>
@@ -421,24 +423,24 @@
     <div class="container">
     <h2 class="activities__title">Other Activities</h2> 
     <div class="activities-wrapper">
-      <div class="card activities__card ">
+      <div class="card card1 activities__card" data-aos="fade-up" data-aos-delay="200">
         <img src="img/activity-1.jpg" alt="" class="card__image">
-        <h3 class="card__title">The curious corner of chamarel</h3>
+        <h3 class="card__title card__title_card1">The curious corner of chamarel</h3>
         <button data-toggle="modal" class="card__button">Book Now</button>
       </div>
-        <div class="card activities__card">
+        <div class="card card2 activities__card"  data-aos="fade-up" data-aos-delay="300">
         <img src="img/activity-2.jpg" alt="" class="card__image">
-        <h3 class="card__title">Gymkhana club golf course</h3>
+        <h3 class="card__title card__title_card2">Gymkhana club golf course</h3>
         <button data-toggle="modal" class="card__button">Book Now</button>
       </div>
-        <div class="card activities__card">
+        <div class="card card3 activities__card"  data-aos="fade-up" data-aos-delay="400">
         <img src="img/activity-3.jpg" alt="" class="card__image">
-        <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
+        <h3 class="card__title card__title_card3">Tamarind falls hiking trip - full day</h3>
         <button data-toggle="modal" class="card__button">Book Now</button>
       </div>
-        <div class="card activities__card">
+        <div class="card card4 activities__card"  data-aos="fade-up" data-aos-delay="500">
         <img src="img/activity-4.jpg" alt="" class="card__image">
-        <h3 class="card__title">The blue marine discovery quest</h3>
+        <h3 class="card__title card__title_card4">The blue marine discovery quest</h3>
         <button data-toggle="modal" class="card__button">Book Now</button>
       </div>
     </div>
@@ -528,11 +530,24 @@
         <!-- /.footer__contact-details -->
         <div class="footer__contact-form">
           <h3 class="footer__title footer__title--mb-3 footer__title--mb-1">Send us a message</h3>
-          <form action="send.php" method="POST" class="footer__form">
-            <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-            <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
+          <!-- <form action="send.php" method="POST" class="footer__form">
+            <input required minlength="2" type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
+            <input required type="tel" class="input footer__input" placeholder="Phone Number*" name="phone"  minlength="11">
             <textarea class="footer__message" placeholder="Message" name="message"></textarea>
             <div class="footer__button-wrapper">
+              <button class="button footer__button" type="submit">Send</button>
+              <span class="footer__info">* Required Fields</span>
+            </div>
+          </form> -->
+          <form action="send.php" method="POST" class="footer__form form">
+            <div class="footer__input-group">
+              <input required minlength="2" type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
+            </div>
+              <div class="footer__input-group">
+                <input required type="tel" class="input footer__input" placeholder="Phone Number*" name="phone" minlength="11">
+              </div>
+            <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
+            <div class="button-wrapper">
               <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
             </div>
@@ -559,16 +574,23 @@
     <!-- /.container -->
   </footer>
   <div class="modal">
-    <div class="modal__overlay"></div>
+    <div class="modal__overlay">
+    </div>
     <div class="modal__dialog">
       <a href="#" class="modal__close">
       <img src="img/close.svg" alt="Icon: close">
       </a>
       <h3 class="modal__title modal__title--mb-3 modal__title--mb-1">Booking</h3>
       <form action="send.php" method="POST" class="modal__form">
-        <input required type="text" class="input modal__input" placeholder="Your Full Name*" name="name">
-        <input required type="text" class="input modal__input" placeholder="Phone Number*" name="phone">
-        <input required type="email" class="input modal__input" placeholder="Your email address" name="email">
+        <div class="modal__form-group">
+          <input required minlength="2" type="text" class="input modal__input" placeholder="Your Full Name*" name="name">
+        </div>
+        <div class="modal__form-group">
+          <input required type="tel" class="input modal__input" placeholder="Phone Number*" name="phone" minlength="11">
+        </div>
+        <div class="modal__form-group">
+          <input required type="email" class="input modal__input" placeholder="Your email address" name="email">
+        </div>
         <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
         <div class="button-wrapper modal-button-wrapper">
           <button class="button modal__button" type="submit">Send</button>
@@ -578,8 +600,11 @@
     </div>
   </div>
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.js"></script>
   <script src="js/parallax.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

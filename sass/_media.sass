@@ -19,8 +19,8 @@
   .container, 
   .newsletter-wrapper
     max-width: 700px    
-  .header
-    margin-top: -1px
+  // .header
+  //   margin-top: -1px
   .logo
     width: 132px
   .navbar
@@ -108,11 +108,15 @@
       grid-template-columns: repeat(2, 1fr)
   .footer
     padding-top: 35px
+    &__title 
+      &--inline 
+        margin-left: 0
     &-wrapper
       grid-template-columns: repeat(6, 1fr)
       grid-row-gap: 40px
     &__contact-form
       grid-column: span 4
+      margin-left: 0
     &__logo
       width: 97px
       height: auto
@@ -147,8 +151,9 @@
       grid-row: 4
       width: 539px
     &__input
-      flex-basis: 47%
-      font-size: 12px
+      &-group
+        flex-basis: 47%
+        font-size: 12px
     &-additional
       padding-top: 0
       justify-content: space-between
@@ -156,6 +161,7 @@
         padding-left: 0
     &__additional
       margin-top: 55px
+
   .modal
     &-button-wrapper
       display: flex
@@ -174,6 +180,11 @@
     box-shadow: none
   a:hover
     text-decoration: none    
+  .packages
+    &__title 
+      margin-top: 0
+      margin-bottom: 10px
+      font-size: 30px
 @media (max-width: 767px) 
   .container
     max-width: 576px
@@ -181,6 +192,7 @@
   body
     padding-top: 78px
   .navbar
+    overflow: hidden
     &__search
       margin-right: 0
     &--fixed
@@ -214,6 +226,7 @@
       flex-direction: column
       padding-top: 0
       max-height: 440px
+      
       &__item
         margin-bottom: 15px
         &--mobile 
@@ -337,11 +350,18 @@
       grid-column: span 6
       margin-left: 0
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
+
   .modal
     &__dialog
       padding: 20px 50px 33px 50px
       width: 85%
+  .packages
+    &__title 
+      margin-top: 0
+      margin-bottom: 0px
+
 @media (max-width: 576px)
   .logo
     width: 99px
@@ -437,7 +457,11 @@
       height: 180px
       object-fit: cover
   .hotel-grid 
-    padding-top: 17px
+    padding-top: 23px
+  .hotel
+    &-info 
+      &__offer
+        margin-top: 0
   .swiper-slider
     &__image 
       width: 100%
@@ -446,11 +470,14 @@
     margin-top: -10px
     padding-top: 29px
     height: 210px
+    &__button 
+      height: 35px
+      padding-top: 12px
   .map 
     height: 173px
     margin-top: 20px
   .newsletter
-    margin-top: -23px
+    margin-top: -25px
     padding: 52px 0 71px 0
     height: 320px
     &-wrapper 
@@ -473,6 +500,9 @@
         font-style: SemiBold
         font-size: 30px
         line-height: 38px
+  .breadcrumb 
+    &-list
+      padding-top: 10px
   // .subscribe
   //   width: 100%
   //   margin-left: 7px
@@ -518,18 +548,33 @@
           margin-top: 0px
         &--next
           margin-top: 0px
+  .hotel-slider__button--prev
+    background-size: 8px
+  .hotel-slider__button--next
+    background-size: 8px
+  .navbar__search--mobile--visible
+    width: 250px
+    margin-bottom: 10px
+  .navbar-bottom 
+    margin-top: -9px
   .swiper-slide
     height: 483px
   .card 
     width: 49%
     height: 255px
+  .card__title_card2  
+    margin-top: 125px  
+  .card__title_card4  
+    margin-top: 125px  
   .activities
-    padding-top: 11px
+    padding-top: 7px
     padding-bottom: 65px
+    &__card 
+      padding-bottom: 29px
     &__title 
       font-size: 18px
       line-height: 23px
-      margin-bottom: 39px
+      margin-bottom: 40px
     .card
       width: 100%
       &:nth-child(2)
@@ -552,6 +597,7 @@
       &--inline
         padding-bottom: 22px
         margin-top: -20px
+        margin-left: 0
       &--mb-1
         margin-bottom: 15px
       &--mb-3
