@@ -98,7 +98,7 @@ menuButton.on('click', function() {
     minlength: "At least 2 letters required",
     },
     phone: {
-      required: "We need your phone to contact you",
+    required: "We need your phone to contact you",
     },
   },
   
@@ -114,6 +114,6 @@ menuButton.on('click', function() {
     },
   });
 
-  $('input[name="phone"]').mask('+7 (999) 999-99-99');
+  $('input[name="phone"]').mask("+7(999) 999-99-99");
     AOS.init();
 });

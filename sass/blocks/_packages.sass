@@ -1,5 +1,5 @@
 .packages
-  padding-bottom: 70px
+  padding-bottom: 64px
   &__title
     margin-top: 41px
     padding-bottom: 35px
@@ -14,7 +14,6 @@
     grid-template-rows: 500px
     row-gap: 30px
     column-gap: 30px
-
 .package
   display: grid
   // flex-direction: column
@@ -29,15 +28,16 @@
     padding-bottom: 15px
     margin-bottom: 18px
     &__title
-      margin-bottom: 22px
+      margin-bottom: 27px
       font-style: normal
       font-weight: bold
       font-size: 18px
       line-height: 23px
       color: $light
   &-first
+    grid-template-columns: 1fr 1fr//new
     grid-column-start: span 2
-    display: grid
+    // display: grid
     flex-direction: row
     &__image
       width: 100%
@@ -78,8 +78,8 @@
       font-size: 14px
       line-height: 160.6%
       color: $light
-      margin-top: 10px
-      margin-bottom: 40px
+      margin-top: 25px
+      margin-bottom: 48px
       overflow: auto
   &-other
     display: flex
@@ -93,7 +93,7 @@
       color: $light
       font-size: 12px
       line-height: 15px
-      margin-left: 13px
+      margin-left: 18px
   &-footer
     display: flex
     justify-content: space-between
