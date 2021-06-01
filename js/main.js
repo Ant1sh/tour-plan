@@ -72,42 +72,42 @@ menuButton.on('click', function() {
   
 
   //Обработка форм
-  $('.modal__form').validate({
+  $(".modal__form").validate({
     errorClass: "invalid",
     messages: {
-    name: {
-    required: "Please specify your name",
-    minlength: "At least 2 letters required",
-    },
-    email: {
-    required: "We need your email address",
-    email: "The format:  name@domain.com",
-    },
-    phone: {
-      required: "We need your phone to contact you",
+      name: {
+        required: "Please specify your name",
+        minlength: "At least 2 letters required",
+      },
+      email: {
+        required: "We need your email address",
+        email: "The format:  name@domain.com",
+      },
+      phone: {
+        required: "We need your phone to contact you",
+        minlength: "At least 11 numbers required",
       },
     },
-    
   });
 
-  $('.footer__form').validate({
+  $(".footer__form").validate({
     errorClass: "invalid",
     messages: {
-    name: {
-    required: "Please specify your name",
-    minlength: "At least 2 letters required",
+      name: {
+        required: "Please specify your name",
+        minlength: "At least 2 letters required",
+      },
+      phone: {
+        required: "We need your phone to contact you",
+        minlength: "At least 11 numbers required",
+      },
     },
-    phone: {
-    required: "We need your phone to contact you",
-    },
-  },
-  
   });
 
   $('.newsletter__subscribe').validate({
     errorClass: "invalid",
     messages: {
-        email: {
+    email: {
     required: "We need your email address",
     email: "The format:  name@domain.com",
     },
